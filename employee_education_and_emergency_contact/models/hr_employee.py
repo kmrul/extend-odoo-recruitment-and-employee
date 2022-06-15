@@ -9,3 +9,9 @@ class HrEmployeeInherit(models.Model):
         string='Emergency Contacts',
         relation='rel_employee_emergency_contact'
     )
+
+    education_ids = fields.Many2many(
+        comodel_name='hr.employee.education.line',
+        string='Education',
+        relation='rel_employee_education'
+    )

@@ -23,4 +23,23 @@
             </xpath>
         </field>
     </record>
+
+    <record id="hr_employee_education_view_tree" model="ir.ui.view">
+        <field name="name">hr.employ.education.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//notebook' position="inside">
+                <page string="Education Informations">
+                    <field name="education_ids" nolabel="1" colspan="4">
+                        <tree>
+                            <field name='institute'/>
+                            <field name='degree'/>
+                            <field name="passing_year"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
 </odoo>

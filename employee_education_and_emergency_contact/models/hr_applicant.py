@@ -20,5 +20,5 @@ class HrApplicantInherit(models.Model):
 
     def create_employee_from_applicant(self):
         res = super(HrApplicantInherit, self).create_employee_from_applicant()
-        res.update({'emergency_contact_ids': self.emergency_contact_ids})
+        res['context']['emergency_contact_ids'] = self.emergency_contact_ids.ids
         return res

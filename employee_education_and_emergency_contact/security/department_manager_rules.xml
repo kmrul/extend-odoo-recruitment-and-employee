@@ -2,9 +2,17 @@
 <odoo>
     <data>
         <record id="hr_dept_manager_rule_own_dept" model="ir.rule">
-            <field name="name">Department Manager Own Department Recruitment Applications</field>
+            <field name="name">Department Manager Own Department</field>
             <field name="model_id" ref="model_hr_job"/>
-            <field name="domain_force">[('department_id.manager_id.user_id', '=', user.id)]</field>
+            <field name="domain_force">[('department_id.manager_id.user_id', '=', user.id)]
+            </field>
+        </record>
+
+        <record id="hr_dept_manager_rule_own_applicants" model="ir.rule">
+            <field name="name">Department Manager Own Department Applications only</field>
+            <field name="model_id" ref="model_hr_applicant"/>
+            <field name="domain_force">[('department_id.manager_id.user_id', '=', user.id)]
+            </field>
         </record>
     </data>
 </odoo>
