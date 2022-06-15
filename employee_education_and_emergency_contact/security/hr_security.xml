@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="group_hr_mangers" model="res.groups">
+        <field name="name">HR Managers</field>
+        <field name="category_id" ref="base.module_category_human_resources_employees"/>
+        <field name="implied_ids" eval="[(6, 0, [ref('base.group_user')])]"/>
+        <field name="comment">The user will gain access to the HR Manager, enabling him to manage.
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="hr_dept_manager_rule_own_dept" model="ir.rule">
+            <field name="name">Department Manager Own Department Recruitment Applications</field>
+            <field name="model_id" ref="model_hr_job"/>
+            <field name="domain_force">[('department_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+    </data>
+</odoo>

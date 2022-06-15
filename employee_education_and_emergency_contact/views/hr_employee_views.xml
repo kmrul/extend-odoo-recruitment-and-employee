@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_employee_emergency_contact_view_form" model="ir.ui.view">
+        <field name="name">hr.employee.emergency.contact.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//notebook' position="inside">
+                <page string="Emergency Contact Informations">
+                    <field name="emergency_contact_ids" nolabel="1" colspan="4">
+                        <tree>
+                            <field name='name'/>
+                            <field name='phone'/>
+                            <field name="street"/>
+                            <field name="street2"/>
+                            <field name="state_id"/>
+                            <field name="zip"/>
+                            <field name="country_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
